@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>SignIn</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="/css/signinstyle.css">
+	</head>
+	<body>
+		<div class="container">
+			<p class="h1 text-center">Welcome!</p>
+			<h2 class="subheading">Please Fill In Your Student Id to Continue the Registration Process</h6> 
+			<form action="/signin" method="post">
+				<div class="form-group">
+					<label>Student Id:</label> 
+					<input class="form-control" type="nim" name="nim" required placeholder="Enter Your Student Id"/>
+					<span class="Error"></span>
+				</div>
+				<div class="form-group">
+					<input class="btn btn-primary btn-block" type="submit" value="Submit"/>
+				</div>
+			</form>
+			<form action="/login" method="get">
+			   	<div class="form-group">
+			    	<input class="btn btn-primary btn-block" type="submit" value="View the Registration List"/>
+				</div>
+			</form>
+				<p th:text="${message}" class="text-center"</p>
+		</div>
+	</body>
+</html>
